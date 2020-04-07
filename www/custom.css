@@ -1,0 +1,122 @@
+/*@font-face {
+  font-family: 'FontAwesome';
+  src: url('font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font-awesome/fonts/Open_Sans_400.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(font-awesome/fonts/Open_Sans_700.ttf) format('truetype');
+}
+
+body, div {
+      font-family: Open Sans !important;
+      font-size: 12.8px !important;
+}
+
+ul li .dropdown {
+      font-family: Open Sans !important;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle {
+color: #fff !important;
+}
+
+/* current css style below */
+
+body .content-wrapper {
+      background-color: #fcfcfc !important;
+}
+
+
+.wrapper {
+      height:100% !important;
+      position:relative !important;
+      overflow-x:hidden !important;
+      overflow-y:hidden !important;
+}
+
+.skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li:hover>a {
+      color: #fff !important;
+      background: #1e282c !important;
+      border-left-color: #004165 !important;
+}
+             
+.bg-light-blue, .label-primary, .modal-primary .modal-body {
+      background-color: #004165 !important;
+}
+             
+.nav-tabs-custom>.nav-tabs>li.active {
+      border-top-color: #004165 !important;
+}
+             
+.skin-blue .main-header .logo {
+      background-color: #004165 !important;
+      color: #fff !important;
+      border-bottom: 0 solid transparent !important;
+}
+             
+.box.box-solid.box-primary>.box-header {
+      color: #fff !important;
+      background: #004165 !important;
+      background-color: #004165 !important;
+}
+             
+header .navbar {
+      background-color: #004165 !important;
+}
+
+.box.box-solid.box-primary {
+      border: 1px solid #004165 !important;
+}
+
+/*.modal-title {color:black;}
+            
+.modal-content {color:black;}
+
+.modal-body {color:black;}*/
+
+.small-box.bg-yellow { 
+      background-color: #494949 !important; 
+      color: #fff !important;
+}
+
+/*#footer_logo {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+}*/
+
+​/*#div_footer {
+    width: 100%;
+    height: 400px;
+    background-image: url(./ANZ_Visual_7.png);
+    background-image: url(http://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Royal_Albert_Hall,_London.jpg/220px-Royal_Albert_Hall,_London.jpg);
+    background-size: 100% 100%;
+}​
+*/
+/*a {
+color: #004165 !important;
+}*/
+
+/* .disclaimer {
+            position:fixed;
+            width:100%;
+            left:0;
+            bottom:0;
+            } */
+/* .disclaimer p {
+              text-align:center;
+              } 
+              */
