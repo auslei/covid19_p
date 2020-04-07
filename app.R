@@ -8,21 +8,19 @@
 #
 library(shinyjs)
 library(shinydashboard)
-library(shinydashboardPlus)
 library(ggplot2)
 library(highcharter)
 library(DT)
 library(tidyverse)
+library(shinythemes)
 source("./lib.r")
 
 # Define UI for application that draws a histogram
 ui <- dashboardPage(
     title = "COVID19",
-    
-
     # Application title
-    header = dashboardHeaderPlus(title = "World COVID19 Status"),
-    
+    header = dashboardHeader(title = "World COVID19 Status"),
+
     # Sidebar with a slider input for number of bins 
     sidebar = dashboardSidebar(
        checkboxInput(inputId = "log", "Log Scale", value = FALSE),
@@ -31,30 +29,37 @@ ui <- dashboardPage(
     ),
     
     body = dashboardBody(
+        #useShinyjs(),
+        #tags$script(HTML("$('body').addClass('fixed');")),
         tags$head(
             tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
         ),
-        
+
         # Show a plot of the generated distribution
         mainPanel(width = 12,
             fluidRow(
-                valueBoxOutput("activeCases"),
-                valueBoxOutput("recovered"),
-                valueBoxOutput("newcases"),
-                valueBoxOutput("death")
+                valueBoxOutput("activeCases", width = 3),
+                valueBoxOutput("recovered", width = 3),
+                valueBoxOutput("newcases", width = 3),
+                valueBoxOutput("death", width = 3)
             ),
             fluidRow(
-                box(title = "World Stat", width = 6, solidHeader = TRUE, 
-                    highchartOutput("map")),
-                
-                box(id = "top10", title = "Top 10", width = 6, height = 400,
-                    tableOutput("top_10"))
-            ),
-            fluidRow(
-                tabBox(id = "charts", title = "Trends", width = 12,
-                tabPanel("Daily Trend", highchartOutput("trend")),
-                tabPanel("Daily Changes", highchartOutput("rate")))
+                tabBox(id = "charts", title = "Trends", width = 7,
+                       tabPanel("Daily Trend", highchartOutput("trend")),
+                       tabPanel("Daily Changes", highchartOutput("rate")),
+                       tabPanel("Daily Data", div(dataTableOutput("summary"), style = "font-size:80%;"))),
+                tabBox(id = "wordmap", title = "Stats", width =5,
+                       tabPanel("World Map", highchartOutput("map")),
+                       tabPanel("Top 10", tableOutput("top_10")))
             )
+            # ),
+            # fluidRow(
+            #     box(title = "World Stat", width = 6, solidHeader = TRUE, 
+            #         highchartOutput("map")),
+            #     
+            #     box(id = "top10", title = "Top 10", width = 6, solidHeader = TRUE, 
+            #         tableOutput("top_10"))
+            # )
         )
     )
 )
